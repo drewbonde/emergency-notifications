@@ -1,0 +1,55 @@
+{
+  "name": "emergency-notifications",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "classnames": "^2.3.1",
+    "material-ui-phone-number": "^2.2.6",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-phone-number-input": "^3.1.21",
+    "react-redux": "^7.2.6",
+    "react-scripts": "4.0.3",
+    "rewire": "^5.0.0",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "node scripts/build-non-split.js && npm run build:clean",
+    "build:clean": "cd build/static/js/ && rm *.chunk.js && rm *.chunk.js.map && cp *.js main.js && cp *.map main.js.map",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "npx prettier --write \"src/**/*.js\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 100
+  }
+}
